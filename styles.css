@@ -1,0 +1,148 @@
+:root {
+  /* 🔧 QUICK CUSTOMIZATION */
+  --primary: #2563eb;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --radius: 14px;
+  --currency: "$"; /* Change currency symbol here */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary);
+}
+
+.results {
+  margin-top: 20px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.result-row strong {
+  font-weight: 600;
+}
+
+.final {
+  font-size: 1.05rem;
+  color: var(--primary);
+  border-top: 1px solid #e2e8f0;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.presets {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.presets button {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.presets button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.gst-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gst-toggle button {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.gst-toggle button.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.gst-toggle .arrow {
+  font-weight: 600;
+  color: #6b7280;
+}

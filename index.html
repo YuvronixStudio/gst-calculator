@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GST Calculator</title>
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>GST Calculator</h1>
+
+      <!-- Amount -->
+      <div class="field">
+        <label for="amount">Amount</label>
+        <input
+          type="number"
+          id="amount"
+          placeholder="Enter amount"
+          step="0.01"
+        />
+      </div>
+
+      <!-- GST Rate + Presets -->
+      <div class="field">
+        <label for="rate">GST Rate (%)</label>
+        <input
+          type="number"
+          id="rate"
+          value="18"
+          step="0.01"
+        />
+
+        <div class="presets">
+          <button type="button" data-rate="5">5%</button>
+          <button type="button" data-rate="12">12%</button>
+          <button type="button" data-rate="18">18%</button>
+          <button type="button" data-rate="28">28%</button>
+        </div>
+      </div>
+
+      <!-- GST Type -->
+      <div class="field">
+        <label>GST Type</label>
+
+        <div class="gst-toggle">
+          <button type="button" id="addBtn" class="active">
+            Add GST
+          </button>
+
+          <span class="arrow">→</span>
+
+          <button type="button" id="removeBtn">
+            Remove GST
+          </button>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="results">
+        <div class="result-row">
+          <span>Original Amount</span>
+          <strong id="original">—</strong>
+        </div>
+
+        <div class="result-row">
+          <span>GST Amount</span>
+          <strong id="gst">—</strong>
+        </div>
+
+        <div class="result-row final">
+          <span>Final Amount</span>
+          <strong id="final">—</strong>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Simple. Accurate. No tracking. No nonsense.
+    </footer>
+  </div>
+
+  <!-- Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
